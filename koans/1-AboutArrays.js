@@ -135,6 +135,6 @@ describe("1. About Arrays", () => {
 
     expect(makeArray("hello", 4)).toEqual(["hello", "hello", "hello", "hello"]);
     expect(makeArray(3,3)).toEqual([3,3,3]);
-  };
-});
+    };
+  });
 });
