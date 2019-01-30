@@ -38,6 +38,6 @@ describe("6. About inheritance", () => {
   });
 
   it("should set constructor parameters on the derived object", () => {
-    expect(this.swedishChef.mood).toEqual"chillin");
+    expect(this.swedishChef.mood).toEqual("chillin");
   });
 });
