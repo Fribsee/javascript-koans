@@ -30,16 +30,20 @@ describe("7. About Applying What We Have Learnt", () => {
       }
     }
 
-    expect(productsICanEat.length).toBe(FILL_ME_IN);
+    expect(productsICanEat.length).toBe(1);
   });
 
   it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", () => {
 
     let productsICanEat = [];
-
     /* solve using filter() & some() / every() */
+     for (i = 0; i< products.length; i++){
+     if (products[i].ingredients.some(function(x) {return x === 'mushrooms'}) == false && products[i].containsNuts === false)
+       {productsICanEat.push(products[i].name)}
+   };
 
-    expect(productsICanEat.length).toBe(FILL_ME_IN);
+   //productsICanEat = products.filter(function(currentItem){currentItem.containsNuts == false && currentItem.ingredients.every(function(x){x !== "mushrooms"})});
+    expect(productsICanEat.length).toBe(1);
   });
   /*********************************************************************************/
 
@@ -55,7 +59,7 @@ describe("7. About Applying What We Have Learnt", () => {
       return FILL_ME_IN;
     };
     largestPalidrome();
-    
+
     expect(largestPalidrome()).toBe(906609);
   });
 
